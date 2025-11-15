@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - Apparels</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="text-white">
+
+    <div class="relative min-h-screen overlay-bg">
+        
+        <header class="bg-white/10 backdrop-blur-md shadow-lg sticky top-0 z-50">
+            <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+                <a href="index.html" class="text-2xl font-bold text-white">Apparels</a>
+                <div class="space-x-4 flex items-center">
+                    <a href="index.html" class="text-white hover:text-teal-300 transition-colors">Home</a>
+                    <a href="shop.html" class="text-teal-300 font-bold transition-colors">Shop</a>
+                    <a href="about.html" class="text-white hover:text-teal-300 transition-colors">About Us</a>
+                    <a href="feedback.html" class="text-white hover:text-teal-300 transition-colors">Feedback</a>
+                    <a href="cart.html" id="cart-link" class="text-white hover:text-teal-300 transition-colors">Cart (0)</a>
+                    <a href="LogIn.html" id="nav-login" class="bg-teal-500 hover:bg-teal-600 text-white px-4 py-2 rounded-md transition-colors">Sign In</a>
+                </div>
+            </nav>
+        </header>
+
+        <main class="container mx-auto px-6 py-12">
+            <h1 class="text-4xl font-bold text-center mb-10">Our Products</h1>
+            
+            <div id="product-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <div class="bg-white/10 backdrop-blur-md p-6 rounded-lg shadow-xl text-center flex flex-col">
+                    <img src="https://placehold.co/400x400/374151/FFFFFF?text=Classic+Tee" alt="Classic Tee" class="w-full h-64 object-cover rounded-md mb-4">
+                    <h3 class="text-2xl font-bold mb-2">Classic Tee</h3>
+                    <p class="text-xl text-teal-300 mb-4">$25.00</p>
+                    <button class="add-to-cart-btn mt-auto bg-teal-500 hover:bg-teal-600 text-white px-6 py-2 rounded-md font-medium transition-colors"
+                        data-id="1" data-name="Classic Tee" data-price="25.00">
+                        Add to Cart
+                    </button>
+                </div>
+                
+                <div class="bg-white/10 backdrop-blur-md p-6 rounded-lg shadow-xl text-center flex flex-col">
+                    <img src="https://placehold.co/400x400/374151/FFFFFF?text=Denim+Jacket" alt="Denim Jacket" class="w-full h-64 object-cover rounded-md mb-4">
+                    <h3 class="text-2xl font-bold mb-2">Denim Jacket</h3>
+                    <p class="text-xl text-teal-300 mb-4">$70.00</p>
+                    <button class="add-to-cart-btn mt-auto bg-teal-500 hover:bg-teal-600 text-white px-6 py-2 rounded-md font-medium transition-colors"
+                        data-id="2" data-name="Denim Jacket" data-price="70.00">
+                        Add to Cart
+                    </button>
+                </div>
+
+                <div class="bg-white/10 backdrop-blur-md p-6 rounded-lg shadow-xl text-center flex flex-col">
+                    <img src="https://placehold.co/400x400/374151/FFFFFF?text=Canvas+Sneakers" alt="Canvas Sneakers" class="w-full h-64 object-cover rounded-md mb-4">
+                    <h3 class="text-2xl font-bold mb-2">Canvas Sneakers</h3>
+                    <p class="text-xl text-teal-300 mb-4">$50.00</p>
+                    <button class="add-to-cart-btn mt-auto bg-teal-500 hover:bg-teal-600 text-white px-6 py-2 rounded-md font-medium transition-colors"
+                        data-id="3" data-name="Canvas Sneakers" data-price="50.00">
+                        Add to Cart
+                    </button>
+                </div>
+
+            </div>
+        </main>
+
+        <footer class="w-full bg-white/10 backdrop-blur-md p-4 text-center text-white/70 mt-12">
+            &copy; 2025 Apparels. All rights reserved.
+        </footer>
+    </div>
+
+    <div id="message-modal" class="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4 hidden z-50">
+        <div class="bg-white text-gray-800 rounded-lg shadow-xl max-w-sm w-full p-6 text-center">
+            <h3 id="modal-title" class="text-2xl font-bold mb-4">Success!</h3>
+            <p id="modal-message" class="text-lg mb-6">Your message has been sent.</p>
+            <button id="modal-close-btn" class="bg-teal-500 hover:bg-teal-600 text-white px-6 py-2 rounded-md font-medium transition-colors">Close</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+
+</body>
+</html>
